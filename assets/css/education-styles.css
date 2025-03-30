@@ -341,30 +341,40 @@
 
 @media screen and (max-width: 767px) {
     .education-wrapper::before {
-        left: 30px;
+        left: 20px;
     }
     
     .education-item {
         flex-direction: column;
+        padding-left: 60px; /* Tambahkan padding untuk memberi ruang */
+        position: relative;
     }
     
     .education-year {
         width: 100%;
         text-align: left;
         padding-right: 0;
-        padding-left: 70px;
+        padding-left: 0;
         margin-bottom: 20px;
     }
     
     .education-content {
         padding-left: 0;
-        margin-top: 30px; /* Tambahkan margin atas */
+        margin-top: 100&; /* Tambahkan margin atas */
     }
     
     .education-icon {
-        left: 0; /* Diubah dari left: 30px dan transform: translateX(-50%) */
-        transform: none; /* Hapus transform untuk mencegah pergeseran */
-        top: -30px; /* Sedikit disesuaikan ke bawah */
+        left: 0; /* Posisikan di kiri */
+        top: 0; /* Posisikan di atas */
+        transform: none;
+        width: 40px; /* Perkecil ukuran ikon */
+        height: 40px;
+        font-size: 1.1rem;
+        position: absolute; /* Pastikan posisinya absolute */
+    }
+
+    .education-card {
+        margin-left: 0; /* Pastikan tidak ada margin kiri */
     }
     
     .education-details {
@@ -378,26 +388,29 @@
 
 @media screen and (max-width: 576px) {
     .education-icon {
-        width: 50px; /* Ukuran ikon diperkecil untuk layar sangat kecil */
-        height: 50px;
-        font-size: 1.2rem;
-        top: -25px; /* Sesuaikan untuk layar yang lebih kecil */
+        width: 35px; /* Ukuran ikon diperkecil untuk layar sangat kecil */
+        height: 35px;
+        font-size: 1rem;
     }
     
     .education-content {
         margin-top: 25px; /* Sesuaikan untuk layar yang lebih kecil */
     }
-    
+
+    .education-item {
+        padding-left: 50px; /* Kurangi padding */
+    }
+
     .education-card {
-        padding: 20px;
+        padding: 15px;
     }
     
     .education-title {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
     
     .education-subtitle {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     
     .certification-body {
