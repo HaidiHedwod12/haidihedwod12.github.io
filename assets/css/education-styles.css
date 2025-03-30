@@ -358,12 +358,13 @@
     
     .education-content {
         padding-left: 0;
+        margin-top: 30px; /* Tambahkan margin atas */
     }
     
     .education-icon {
         left: 0; /* Diubah dari left: 30px dan transform: translateX(-50%) */
         transform: none; /* Hapus transform untuk mencegah pergeseran */
-        top: -25px; /* Sedikit disesuaikan ke bawah */
+        top: -30px; /* Sedikit disesuaikan ke bawah */
     }
     
     .education-details {
@@ -380,6 +381,11 @@
         width: 50px; /* Ukuran ikon diperkecil untuk layar sangat kecil */
         height: 50px;
         font-size: 1.2rem;
+        top: -25px; /* Sesuaikan untuk layar yang lebih kecil */
+    }
+    
+    .education-content {
+        margin-top: 25px; /* Sesuaikan untuk layar yang lebih kecil */
     }
     
     .education-card {
