@@ -361,8 +361,9 @@
     }
     
     .education-icon {
-        left: 0; /* Ubah dari left: 30px dan transform: translateX(-50%) */
-        transform: none;
+        left: 0; /* Diubah dari left: 30px dan transform: translateX(-50%) */
+        transform: none; /* Hapus transform untuk mencegah pergeseran */
+        top: 5px; /* Sedikit disesuaikan ke bawah */
     }
     
     .education-details {
@@ -375,8 +376,22 @@
 }
 
 @media screen and (max-width: 576px) {
+    .education-icon {
+        width: 50px; /* Ukuran ikon diperkecil untuk layar sangat kecil */
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
     .education-card {
         padding: 20px;
+    }
+    
+    .education-title {
+        font-size: 1.3rem;
+    }
+    
+    .education-subtitle {
+        font-size: 1rem;
     }
     
     .certification-body {
