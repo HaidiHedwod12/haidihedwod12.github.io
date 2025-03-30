@@ -363,7 +363,7 @@
     .education-icon {
         left: 0; /* Diubah dari left: 30px dan transform: translateX(-50%) */
         transform: none; /* Hapus transform untuk mencegah pergeseran */
-        top: 5px; /* Sedikit disesuaikan ke bawah */
+        top: -25px; /* Sedikit disesuaikan ke bawah */
     }
     
     .education-details {
