@@ -361,8 +361,8 @@
     }
     
     .education-icon {
-        left: 30px;
-        transform: translateX(-50%);
+        left: 0; /* Ubah dari left: 30px dan transform: translateX(-50%) */
+        transform: none;
     }
     
     .education-details {
