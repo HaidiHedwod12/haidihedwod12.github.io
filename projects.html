@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyek - Haidi Fathur Rahman</title>
+    <meta name="description" content="Portofolio proyek Haidi Fathur Rahman, spesialis GIS dan pengembang solusi">
+    
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Utama -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/projects-styles.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader">
+        <svg class="logo-animation" width="80" height="80" viewBox="0 0 100 100">
+            <path d="M20,50 A30,30 0 1,1 80,50 A30,30 0 1,1 20,50 Z" fill="none" stroke="url(#gradient)" stroke-width="5"/>
+            <path class="logo-path" d="M30,50 L45,35 L55,65 L70,50" fill="none" stroke="url(#gradient)" stroke-width="5" stroke-linecap="round"/>
+            <text x="50" y="52" text-anchor="middle" dominant-baseline="middle" fill="url(#gradient)" font-family="Poppins" font-size="18" font-weight="600">HFR</text>
+            <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#3a7bd5"/>
+                    <stop offset="100%" stop-color="#3a6073"/>
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <svg width="40" height="40" viewBox="0 0 100 100">
+                            <path d="M20,50 A30,30 0 1,1 80,50 A30,30 0 1,1 20,50 Z" fill="none" stroke="url(#gradient)" stroke-width="5"/>
+                            <path d="M30,50 L45,35 L55,65 L70,50" fill="none" stroke="url(#gradient)" stroke-width="5" stroke-linecap="round"/>
+                            <text x="50" y="52" text-anchor="middle" dominant-baseline="middle" fill="url(#gradient)" font-family="Poppins" font-size="18" font-weight="600">HFR</text>
+                        </svg>
+                        <span>Haidi Fathur Rahman</span>
+                    </a>
+                </div>
+                
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="index.html" data-lang-key="nav.home">Beranda</a></li>
+                        <li><a href="about.html" data-lang-key="nav.about">Tentang</a></li>
+                        <li><a href="education.html" data-lang-key="nav.education">Pendidikan</a></li>
+                        <li><a href="experience.html" data-lang-key="nav.experience">Pengalaman</a></li>
+                        <li><a href="projects.html" class="active" data-lang-key="nav.projects">Proyek</a></li>
+                        <li><a href="contact.html" data-lang-key="nav.contact">Kontak</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-controls">
+                    <div class="language-selector">
+                        <button class="lang-btn active" data-lang="id">ID</button>
+                        <span>|</span>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                    
+                    <button class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    
+                    <button class="mobile-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title" data-lang-key="projects.title">Proyek</h1>
+            <p class="page-subtitle" data-lang-key="projects.subtitle">Beberapa pekerjaan terbaik yang telah saya selesaikan</p>
+        </div>
+        <div class="page-header-pattern"></div>
+    </section>
+
+    <!-- Project Filters -->
+    <section class="project-filters">
+        <div class="container">
+            <div class="filters-container">
+                <button class="filter-button active" data-filter="all">Semua</button>
+                <button class="filter-button" data-filter="gis">GIS & Pemetaan</button>
+                <button class="filter-button" data-filter="excel">Excel VBA</button>
+                <button class="filter-button" data-filter="app">Aplikasi</button>
+                <button class="filter-button" data-filter="web">Web</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-grid-section">
+        <div class="container">
+            <div class="projects-grid">
+                <!-- Project 1: Village Boundary -->
+                <div class="project-item reveal" data-category="gis" id="boundary">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/img/projects/village-boundaries.jpg" alt="Proyek Batas Desa">
+                            <div class="project-overlay">
+                                <div class="project-category">GIS</div>
+                                <a href="#project-modal-1" class="view-project-btn">Lihat Detail</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Proyek Batas Desa</h3>
+                            <p>Fasilitasi pembuatan peta batas desa untuk pemerintah daerah menggunakan teknologi GIS lanjutan.</p>
+                            <div class="project-meta">
+                                <span><i class="fas fa-calendar"></i> 2022</span>
+                                <span><i class="fas fa-user"></i> Pemerintah Daerah</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2: Data Automation -->
+                <div class="project-item reveal" data-category="excel" id="excel">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/img/projects/excel-automation.jpg" alt="Sistem Otomatisasi Data">
+                            <div class="project-overlay">
+                                <div class="project-category">Excel VBA</div>
+                                <a href="#project-modal-2" class="view-project-btn">Lihat Detail</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Sistem Otomatisasi Data</h3>
+                            <p>Pengembangan sistem otomatisasi input dan analisis data dengan Excel VBA untuk PT. Rekadwipa.</p>
+                            <div class="project-meta">
+                                <span><i class="fas fa-calendar"></i> 2022</span>
+                                <span><i class="fas fa-user"></i> PT. Rekadwipa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3: Office Documentation App -->
+                <div class="project-item reveal" data-category="app" id="app">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/img/projects/app-development.jpg" alt="Aplikasi Dokumentasi Kantor">
+                            <div class="project-overlay">
+                                <div class="project-category">Aplikasi</div>
+                                <a href="#project-modal-3" class="view-project-btn">Lihat Detail</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Aplikasi Dokumentasi Kantor</h3>
+                            <p>Pembuatan aplikasi dokumentasi dan notulensi dengan bantuan AI untuk efisiensi workflow.</p>
+                            <div class="project-meta">
+                                <span><i class="fas fa-calendar"></i> 2023</span>
+                                <span><i class="fas fa-user"></i> PT. Rekadwipa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4: Thematic Mapping -->
+                <div class="project-item reveal" data-category="gis">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/img/projects/thematic-mapping.jpg" alt="Pemetaan Tematik">
+                            <div class="project-overlay">
+                                <div class="project-category">GIS</div>
+                                <a href="#project-modal-4" class="view-project-btn">Lihat Detail</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Pemetaan Tematik Kabupaten</h3>
+                            <p>Pembuatan peta tematik untuk visualisasi data demografi, ekonomi, dan sosial di tingkat kabupaten.</p>
+                            <div class="project-meta">
+                                <span><i class="fas fa-calendar"></i> 2021</span>
+                                <span><i class="fas fa-user"></i> BAPPEDA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5: VBA Reporting Tool -->
+                <div class="project-item reveal" data-category="excel">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/img/projects/vba-reporting.jpg" alt="Tool Pelaporan VBA">
+                            <div class="project-overlay">
+                                <div class="project-category">Excel VBA</div>
+                                <a href="#project-modal-5" class="view-project-btn">Lihat Detail</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Tool Pelaporan Otomatis</h3>
+                            <p>Pengembangan alat pelaporan otomatis dengan Excel VBA untuk pengelolaan data proyek konstruksi.</p>
+                            <div class="project-meta">
+                                <span><i class="fas fa-calendar"></i> 2022</span>
+                                <span><i class="fas fa-user"></i> PT. Konstruksi Jaya</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6: Android Scanner App -->
+                <div class="project-item reveal" data-category="app">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/img/projects/scanner-app.jpg" alt="Aplikasi Scanner">
+                            <div class="project-overlay">
+                                <div class="project-category">Aplikasi</div>
+                                <a href="#project-modal-6" class="view-project-btn">Lihat Detail</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Aplikasi Scanner Mobile</h3>
+                            <p>Aplikasi Android untuk memindai dan mengorganisir dokumen dengan fitur OCR dan kategorisasi otomatis.</p>
+                            <div class="project-meta">
+                                <span><i class="fas fa-calendar"></i> 2023</span>
+                                <span><i class="fas fa-user"></i> Freelance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 7: Company Website -->
+                <div class="project-item reveal" data-category="web">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/img/projects/company-website.jpg" alt="Website Perusahaan">
+                            <div class="project-overlay">
+                                <div class="project-category">Web</div>
+                                <a href="#project-modal-7" class="view-project-btn">Lihat Detail</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Website Perusahaan</h3>
+                            <p>Pengembangan website responsif untuk perusahaan dengan bantuan AI untuk mengoptimalkan desain dan konten.</p>
+                            <div class="project-meta">
+                                <span><i class="fas fa-calendar"></i> 2023</span>
+                                <span><i class="fas fa-user"></i> PT. Rekadwipa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 8: Spatial Analysis -->
+                <div class="project-item reveal" data-category="gis">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/img/projects/spatial-analysis.jpg" alt="Analisis Spasial">
+                            <div class="project-overlay">
+                                <div class="project-category">GIS</div>
+                                <a href="#project-modal-8" class="view-project-btn">Lihat Detail</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Analisis Spasial untuk Perumahan</h3>
+                            <p>Analisis kesesuaian lahan dan aksesibilitas untuk pengembangan kawasan perumahan baru.</p>
+                            <div class="project-meta">
+                                <span><i class="fas fa-calendar"></i> 2021</span>
+                                <span><i class="fas fa-user"></i> Perumahan Griya Indah</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modals -->
+    <!-- Modal 1: Village Boundary Project -->
+    <div id="project-modal-1" class="project-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Proyek Batas Desa</h2>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="assets/img/projects/village-boundaries.jpg" alt="Proyek Batas Desa">
+                </div>
+                <div class="modal-details">
+                    <div class="modal-info">
+                        <h3>Informasi Proyek</h3>
+                        <ul>
+                            <li><strong>Klien:</strong> Pemerintah Daerah</li>
+                            <li><strong>Tahun:</strong> 2022</li>
+                            <li><strong>Kategori:</strong> GIS & Pemetaan</li>
+                            <li><strong>Tools:</strong> ArcGIS, QGIS, GPS</li>
+                        </ul>
+                    </div>
+                    <div class="modal-description">
+                        <h3>Deskripsi Proyek</h3>
+                        <p>
+                            Proyek ini berfokus pada fasilitasi pembuatan peta batas desa untuk pemerintah daerah. Tujuan utamanya 
+                            adalah untuk membantu menyelesaikan konflik batas antar desa dan menyediakan peta batas yang akurat dan disepakati.
+                        </p>
+                        <p>
+                            Proses ini melibatkan pengumpulan data lapangan dengan GPS, konsultasi dengan tokoh masyarakat, 
+                            dan koordinasi dengan pihak pemerintah. Data yang dikumpulkan kemudian diolah menggunakan ArcGIS dan QGIS 
+                            untuk pembuatan peta digital yang akurat.
+                        </p>
+                        <p>
+                            Hasil akhir dari proyek ini adalah peta batas desa yang disepakati oleh semua pihak, 
+                            didokumentasikan secara resmi, dan dapat digunakan sebagai dasar untuk perencanaan pembangunan 
+                            dan administrasi wilayah.
+                        </p>
+                    </div>
+                    <div class="modal-challenges">
+                        <h3>Tantangan & Solusi</h3>
+                        <p>
+                            Tantangan utama dalam proyek ini adalah menyelaraskan persepsi batas berdasarkan ingatan 
+                            tokoh masyarakat dengan data geografis yang ada. Konflik kepentingan juga sering muncul 
+                            terutama untuk wilayah yang memiliki potensi ekonomi.
+                        </p>
+                        <p>
+                            Solusi yang diterapkan adalah pendekatan partisipatif dengan melibatkan semua pemangku kepentingan, 
+                            verifikasi lapangan bersama, dan penggunaan teknologi GIS untuk visualisasi yang jelas. 
+                            Negosiasi dan mediasi juga dilakukan untuk wilayah yang memiliki perbedaan pendapat signifikan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Excel Automation System -->
+    <div id="project-modal-2" class="project-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Sistem Otomatisasi Data</h2>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="assets/img/projects/excel-automation.jpg" alt="Sistem Otomatisasi Data">
+                </div>
+                <div class="modal-details">
+                    <div class="modal-info">
+                        <h3>Informasi Proyek</h3>
+                        <ul>
+                            <li><strong>Klien:</strong> PT. Rekadwipa Teknika Studio</li>
+                            <li><strong>Tahun:</strong> 2022</li>
+                            <li><strong>Kategori:</strong> Excel VBA</li>
+                            <li><strong>Tools:</strong> Microsoft Excel, VBA, SQL</li>
+                        </ul>
+                    </div>
+                    <div class="modal-description">
+                        <h3>Deskripsi Proyek</h3>
+                        <p>
+                            Proyek ini bertujuan untuk mengotomatisasi proses input, pengolahan, dan analisis data di PT. Rekadwipa 
+                            Teknika Studio. Sebelumnya, proses ini dilakukan secara manual yang memakan waktu dan rawan kesalahan.
+                        </p>
+                        <p>
+                            Sistem yang dikembangkan menggunakan Excel VBA memungkinkan pengguna untuk mengimpor data dari berbagai 
+                            sumber, melakukan validasi otomatis, mengolah data dengan formula lanjutan, dan menghasilkan laporan 
+                            yang siap digunakan untuk pengambilan keputusan.
+                        </p>
+                        <p>
+                            Fitur utama sistem mencakup dashboard interaktif, pemfilteran data lanjutan, pengolahan data spasial, 
+                            dan kemampuan untuk mengekspor hasil dalam berbagai format sesuai kebutuhan pengguna.
+                        </p>
+                    </div>
+                    <div class="modal-challenges">
+                        <h3>Tantangan & Solusi</h3>
+                        <p>
+                            Tantangan utama adalah kompleksitas data yang perlu diolah dan kebutuhan untuk tetap menjaga performa sistem 
+                            saat menangani data dalam jumlah besar.
+                        </p>
+                        <p>
+                            Solusi yang diterapkan meliputi optimasi kode VBA, penggunaan array untuk mempercepat pengolahan, dan 
+                            implementasi caching data untuk mengurangi waktu kalkulasi. Antarmuka pengguna juga dirancang 
+                            agar intuitif dan mudah digunakan oleh staff yang tidak memiliki pengetahuan teknis yang mendalam.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Office Documentation App -->
+    <div id="project-modal-3" class="project-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Aplikasi Dokumentasi Kantor</h2>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="assets/img/projects/app-development.jpg" alt="Aplikasi Dokumentasi Kantor">
+                </div>
+                <div class="modal-details">
+                    <div class="modal-info">
+                        <h3>Informasi Proyek</h3>
+                        <ul>
+                            <li><strong>Klien:</strong> PT. Rekadwipa Teknika Studio</li>
+                            <li><strong>Tahun:</strong> 2023</li>
+                            <li><strong>Kategori:</strong> Aplikasi</li>
+                            <li><strong>Tools:</strong> AI-Assisted Development, Windows Forms, C#</li>
+                        </ul>
+                    </div>
+                    <div class="modal-description">
+                        <h3>Deskripsi Proyek</h3>
+                        <p>
+                            Proyek ini melibatkan pengembangan aplikasi dokumentasi dan notulensi untuk meningkatkan efisiensi workflow 
+                            di PT. Rekadwipa Teknika Studio. Aplikasi ini dibangun dengan bantuan AI untuk mempercepat proses pengembangan.
+                        </p>
+                        <p>
+                            Aplikasi ini memungkinkan pengguna untuk memindai dokumen langsung dari ponsel, mengategorikan dokumen secara 
+                            otomatis, membuat notulensi rapat, dan mengintegrasikan semua dokumentasi ke dalam sistem terpusat.
+                        </p>
+                        <p>
+                            Fitur utama aplikasi termasuk OCR (Optical Character Recognition) untuk ekstraksi teks dari gambar, 
+                            pencarian dokumen berdasarkan kata kunci, pengingat deadline, dan sistem notifikasi.
+                        </p>
+                    </div>
+                    <div class="modal-challenges">
+                        <h3>Tantangan & Solusi</h3>
+                        <p>
+                            Tantangan utama adalah mengembangkan aplikasi yang mudah digunakan namun tetap memiliki fitur lengkap, 
+                            serta memastikan keamanan data sensitif perusahaan.
+                        </p>
+                        <p>
+                            Dengan bantuan AI, pengembangan aplikasi bisa dilakukan lebih cepat dengan tetap mempertahankan kualitas kode. 
+                            Sistem keamanan berlapis diimplementasikan, termasuk enkripsi data dan kontrol akses berdasarkan peran pengguna. 
+                            Antarmuka pengguna dirancang dengan prinsip UX yang baik untuk memastikan kemudahan penggunaan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- More modals can be added for other projects -->
+
+    <!-- Call to Action -->
+    <section class="projects-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Tertarik untuk Bekerja Sama?</h2>
+                <p>Jika Anda memiliki proyek yang membutuhkan keahlian dalam GIS, Excel VBA, atau pengembangan aplikasi, jangan ragu untuk menghubungi saya. Mari wujudkan ide Anda menjadi solusi nyata!</p>
+                <a href="contact.html" class="btn btn-primary">Hubungi Saya</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <svg width="40" height="40" viewBox="0 0 100 100">
+                        <path d="M20,50 A30,30 0 1,1 80,50 A30,30 0 1,1 20,50 Z" fill="none" stroke="url(#gradient)" stroke-width="5"/>
+                        <path d="M30,50 L45,35 L55,65 L70,50" fill="none" stroke="url(#gradient)" stroke-width="5" stroke-linecap="round"/>
+                        <text x="50" y="52" text-anchor="middle" dominant-baseline="middle" fill="url(#gradient)" font-family="Poppins" font-size="18" font-weight="600">HFR</text>
+                    </svg>
+                    <p data-lang-key="footer.tagline">Solusi inovatif untuk perencanaan wilayah dan analisis data</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h4 data-lang-key="footer.navigation">Navigasi</h4>
+                        <ul>
+                            <li><a href="index.html" data-lang-key="nav.home">Beranda</a></li>
+                            <li><a href="about.html" data-lang-key="nav.about">Tentang</a></li>
+                            <li><a href="education.html" data-lang-key="nav.education">Pendidikan</a></li>
+                            <li><a href="experience.html" data-lang-key="nav.experience">Pengalaman</a></li>
+                            <li><a href="projects.html" data-lang-key="nav.projects">Proyek</a></li>
+                            <li><a href="contact.html" data-lang-key="nav.contact">Kontak</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-column">
+                        <h4 data-lang-key="footer.services">Layanan</h4>
+                        <ul>
+                            <li><a href="#" data-lang-key="services.gis">GIS & Pemetaan</a></li>
+                            <li><a href="#" data-lang-key="services.excel">Otomatisasi Excel</a></li>
+                            <li><a href="#" data-lang-key="services.development">Pengembangan Aplikasi</a></li>
+                            <li><a href="#" data-lang-key="services.consultation">Konsultasi</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4 data-lang-key="footer.contact">Kontak</h4>
+                    <p><i class="fas fa-envelope"></i> Fathurrahmanhaidi@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +62 821 3832 7266</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <span data-lang-key="footer.location">Surakarta, Indonesia</span></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> Haidi Fathur Rahman. <span data-lang-key="footer.rights">Hak Cipta Dilindungi.</span></p>
+                <div class="footer-langs">
+                    <button class="footer-lang-btn active" data-lang="id">ID</button>
+                    <span>|</span>
+                    <button class="footer-lang-btn" data-lang="en">EN</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/language.js"></script>
+    <script src="assets/js/projects.js"></script>
+</body>
+</html>

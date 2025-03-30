@@ -1,0 +1,265 @@
+/* ==============================================
+   RESPONSIVE STYLES - Portofolio Haidi Fathur Rahman
+   ============================================== */
+
+/* --------- LARGER SCREENS (1400px+) --------- */
+@media screen and (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+    
+    .hero-text h1 {
+        font-size: 4rem;
+    }
+    
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+}
+
+/* --------- DESKTOPS (1200px+) --------- */
+@media screen and (min-width: 1200px) {
+    /* Additional styles for desktops if needed */
+}
+
+/* --------- LAPTOPS & SMALL DESKTOPS (992px - 1199px) --------- */
+@media screen and (max-width: 1199px) {
+    html {
+        font-size: 15px;
+    }
+    
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+    
+    .profile-picture-container {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* --------- TABLETS (768px - 991px) --------- */
+@media screen and (max-width: 991px) {
+    html {
+        font-size: 14px;
+    }
+    
+    .header-wrapper {
+        padding: 0.75rem 0;
+    }
+    
+    .navigation {
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 300px;
+        height: 100vh;
+        background-color: white;
+        box-shadow: var(--shadow-lg);
+        transition: right var(--transition-normal);
+        padding: 80px 40px;
+        z-index: var(--z-modal);
+    }
+    
+    .dark-mode .navigation {
+        background-color: var(--bg-dark);
+    }
+    
+    .navigation.active {
+        right: 0;
+    }
+    
+    .navigation ul {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .navigation a {
+        font-size: 1.2rem;
+    }
+    
+    .mobile-menu {
+        display: flex;
+    }
+    
+    .mobile-menu.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    
+    .mobile-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-menu.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+    
+    .hero-content {
+        flex-direction: column;
+    }
+    
+    .hero-text {
+        text-align: center;
+        order: 2;
+    }
+    
+    .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .hero-cta {
+        justify-content: center;
+    }
+    
+    .hero-image {
+        order: 1;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .profile-picture-container {
+        margin: 0 auto;
+    }
+    
+    .contact-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contact-social {
+        justify-content: center;
+        margin-top: var(--spacing-md);
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .footer-contact {
+        grid-column: span 2;
+        margin-top: var(--spacing-lg);
+    }
+}
+
+/* --------- MOBILE LANDSCAPE (576px - 767px) --------- */
+@media screen and (max-width: 767px) {
+    html {
+        font-size: 13px;
+    }
+    
+    .hero {
+        padding-top: calc(4rem + var(--spacing-xl));
+    }
+    
+    .section-header {
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-text h2 {
+        font-size: 1.25rem;
+    }
+    
+    .profile-picture-container {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .floating-skill {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+    
+    .expertise-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-dot {
+        left: 30px;
+    }
+    
+    .timeline-date {
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: none;
+        display: inline-block;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .timeline-content {
+        width: auto;
+        margin-left: 60px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .footer-contact {
+        grid-column: span 1;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+}
+
+/* --------- MOBILE PORTRAIT (Up to 575px) --------- */
+@media screen and (max-width: 575px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-text h2 {
+        font-size: 1.1rem;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .hero-cta .btn {
+        width: 100%;
+    }
+    
+    .profile-picture-container {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .logo a span {
+        display: none;
+    }
+}

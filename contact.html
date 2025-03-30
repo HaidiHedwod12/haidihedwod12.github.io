@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Haidi Fathur Rahman</title>
+    <meta name="description" content="Hubungi Haidi Fathur Rahman untuk layanan GIS, Excel VBA, dan pengembangan aplikasi">
+    
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Utama -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/contact-styles.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader">
+        <svg class="logo-animation" width="80" height="80" viewBox="0 0 100 100">
+            <path d="M20,50 A30,30 0 1,1 80,50 A30,30 0 1,1 20,50 Z" fill="none" stroke="url(#gradient)" stroke-width="5"/>
+            <path class="logo-path" d="M30,50 L45,35 L55,65 L70,50" fill="none" stroke="url(#gradient)" stroke-width="5" stroke-linecap="round"/>
+            <text x="50" y="52" text-anchor="middle" dominant-baseline="middle" fill="url(#gradient)" font-family="Poppins" font-size="18" font-weight="600">HFR</text>
+            <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#3a7bd5"/>
+                    <stop offset="100%" stop-color="#3a6073"/>
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <svg width="40" height="40" viewBox="0 0 100 100">
+                            <path d="M20,50 A30,30 0 1,1 80,50 A30,30 0 1,1 20,50 Z" fill="none" stroke="url(#gradient)" stroke-width="5"/>
+                            <path d="M30,50 L45,35 L55,65 L70,50" fill="none" stroke="url(#gradient)" stroke-width="5" stroke-linecap="round"/>
+                            <text x="50" y="52" text-anchor="middle" dominant-baseline="middle" fill="url(#gradient)" font-family="Poppins" font-size="18" font-weight="600">HFR</text>
+                        </svg>
+                        <span>Haidi Fathur Rahman</span>
+                    </a>
+                </div>
+                
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="index.html" data-lang-key="nav.home">Beranda</a></li>
+                        <li><a href="about.html" data-lang-key="nav.about">Tentang</a></li>
+                        <li><a href="education.html" data-lang-key="nav.education">Pendidikan</a></li>
+                        <li><a href="experience.html" data-lang-key="nav.experience">Pengalaman</a></li>
+                        <li><a href="projects.html" data-lang-key="nav.projects">Proyek</a></li>
+                        <li><a href="contact.html" class="active" data-lang-key="nav.contact">Kontak</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-controls">
+                    <div class="language-selector">
+                        <button class="lang-btn active" data-lang="id">ID</button>
+                        <span>|</span>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                    
+                    <button class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    
+                    <button class="mobile-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title" data-lang-key="contact.title">Mari Bekerja Sama!</h1>
+            <p class="page-subtitle" data-lang-key="contact.description">
+                Tertarik dengan keahlian saya? Apakah Anda memiliki proyek GIS, 
+                Excel VBA, atau pengembangan aplikasi? Jangan ragu untuk menghubungi saya!
+            </p>
+        </div>
+        <div class="page-header-pattern"></div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="contact-info-wrapper">
+                <div class="contact-info-card reveal">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>Fathurrahmanhaidi@gmail.com</p>
+                    <a href="mailto:Fathurrahmanhaidi@gmail.com" class="contact-link">Kirim Email</a>
+                </div>
+                
+                <div class="contact-info-card reveal delay-200">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Telepon</h3>
+                    <p>+62 821 3832 7266</p>
+                    <a href="tel:+6282138327266" class="contact-link">Hubungi</a>
+                </div>
+                
+                <div class="contact-info-card reveal delay-400">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Lokasi</h3>
+                    <p>Surakarta, Indonesia</p>
+                    <a href="https://maps.google.com/?q=Surakarta,Indonesia" target="_blank" class="contact-link">Lihat di Maps</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-form-container reveal">
+                    <div class="section-header">
+                        <h2 class="section-title">Kirim Pesan</h2>
+                        <p class="section-subtitle">Isi formulir di bawah dan saya akan menghubungi Anda sesegera mungkin</p>
+                    </div>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name" data-lang-key="contact.form.name">Nama Lengkap</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" data-lang-key="contact.form.email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" data-lang-key="contact.form.subject">Subjek</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" data-lang-key="contact.form.message">Pesan</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary submit-btn" data-lang-key="contact.form.submit">
+                            <span class="btn-text">Kirim Pesan</span>
+                            <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="contact-image reveal delay-200">
+                    <div class="image-container">
+                        <img src="assets/img/contact-illustration.svg" alt="Contact Illustration">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Freelance Platforms Section -->
+    <section class="freelance-platforms">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Temukan Saya di Platform Freelance</h2>
+                <p class="section-subtitle">Anda juga dapat memesan layanan saya melalui platform berikut</p>
+            </div>
+            
+            <div class="platforms-wrapper">
+                <div class="platform-card reveal">
+                    <div class="platform-icon">
+                        <!-- Logo Fastwork yang lebih besar dan jelas -->
+                        <img src="assets/img/icons/fastwork.png" alt="Fastwork">
+                    </div>
+                    <h3>Fastwork</h3>
+                    <p>Layanan GIS, Excel VBA, dan pembuatan aplikasi tersedia di profil Fastwork saya.</p>
+                    <a href="https://fastwork.id" target="_blank" class="platform-link">Kunjungi Profil</a>
+                </div>
+                
+                <div class="platform-card reveal delay-200">
+                    <div class="platform-icon">
+                        <!-- Logo Upwork yang lebih besar dan jelas -->
+                        <img src="assets/img/icons/upwork.png" alt="Upwork">
+                    </div>
+                    <h3>Upwork</h3>
+                    <p>Saya juga menerima proyek internasional melalui platform Upwork.</p>
+                    <a href="https://upwork.com" target="_blank" class="platform-link">Kunjungi Profil</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Pertanyaan yang Sering Diajukan</h2>
+                <p class="section-subtitle">Jawaban untuk pertanyaan umum tentang layanan saya</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item reveal">
+                    <div class="faq-question">
+                        <h3>Bagaimana proses kerja Anda untuk proyek GIS?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Proses kerja untuk proyek GIS dimulai dengan konsultasi awal untuk memahami kebutuhan Anda. 
+                            Kemudian saya akan mengumpulkan data yang diperlukan, melakukan analisis, dan membuat visualisasi 
+                            sesuai kebutuhan. Revisi dan penyesuaian akan dilakukan hingga hasil akhir sesuai dengan harapan.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item reveal delay-100">
+                    <div class="faq-question">
+                        <h3>Berapa lama waktu yang dibutuhkan untuk mengembangkan aplikasi dengan bantuan AI?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Waktu pengembangan aplikasi dengan bantuan AI sangat bervariasi tergantung kompleksitas proyek. 
+                            Untuk aplikasi sederhana, bisa selesai dalam 1-2 minggu. Sedangkan untuk aplikasi yang lebih kompleks 
+                            mungkin membutuhkan waktu 1-2 bulan. Saya akan memberikan estimasi waktu yang lebih akurat setelah 
+                            mendiskusikan detail proyek Anda.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item reveal delay-200">
+                    <div class="faq-question">
+                        <h3>Apakah Anda menerima proyek revisi dan perbaikan Excel VBA yang sudah ada?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Ya, saya menerima proyek revisi dan perbaikan Excel VBA yang sudah ada. Saya akan memeriksa kode yang ada, 
+                            memperbaiki bug, mengoptimalkan performa, dan menambahkan fitur baru sesuai kebutuhan Anda. 
+                            Penting untuk menyediakan dokumentasi dan informasi yang jelas tentang fungsi yang diharapkan.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item reveal delay-300">
+                    <div class="faq-question">
+                        <h3>Bagaimana metode pembayaran untuk layanan Anda?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Saya menerima pembayaran melalui transfer bank, e-wallet (DANA, GoPay, OVO), atau melalui platform freelance 
+                            (Fastwork, Upwork). Untuk proyek bernilai besar, saya biasanya menerapkan sistem pembayaran bertahap: 
+                            50% di awal sebagai deposit dan 50% setelah proyek selesai.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item reveal delay-400">
+                    <div class="faq-question">
+                        <h3>Apakah Anda menyediakan dukungan setelah proyek selesai?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Ya, saya menyediakan periode dukungan gratis selama 14 hari setelah proyek selesai untuk perbaikan bug 
+                            dan pertanyaan. Untuk dukungan jangka panjang, saya juga menawarkan paket pemeliharaan bulanan atau tahunan 
+                            yang mencakup pembaruan, perbaikan, dan penambahan fitur minor.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <svg width="40" height="40" viewBox="0 0 100 100">
+                        <path d="M20,50 A30,30 0 1,1 80,50 A30,30 0 1,1 20,50 Z" fill="none" stroke="url(#gradient)" stroke-width="5"/>
+                        <path d="M30,50 L45,35 L55,65 L70,50" fill="none" stroke="url(#gradient)" stroke-width="5" stroke-linecap="round"/>
+                        <text x="50" y="52" text-anchor="middle" dominant-baseline="middle" fill="url(#gradient)" font-family="Poppins" font-size="18" font-weight="600">HFR</text>
+                    </svg>
+                    <p data-lang-key="footer.tagline">Solusi inovatif untuk perencanaan wilayah dan analisis data</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h4 data-lang-key="footer.navigation">Navigasi</h4>
+                        <ul>
+                            <li><a href="index.html" data-lang-key="nav.home">Beranda</a></li>
+                            <li><a href="about.html" data-lang-key="nav.about">Tentang</a></li>
+                            <li><a href="education.html" data-lang-key="nav.education">Pendidikan</a></li>
+                            <li><a href="experience.html" data-lang-key="nav.experience">Pengalaman</a></li>
+                            <li><a href="projects.html" data-lang-key="nav.projects">Proyek</a></li>
+                            <li><a href="contact.html" data-lang-key="nav.contact">Kontak</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-column">
+                        <h4 data-lang-key="footer.services">Layanan</h4>
+                        <ul>
+                            <li><a href="#" data-lang-key="services.gis">GIS & Pemetaan</a></li>
+                            <li><a href="#" data-lang-key="services.excel">Otomatisasi Excel</a></li>
+                            <li><a href="#" data-lang-key="services.development">Pengembangan Aplikasi</a></li>
+                            <li><a href="#" data-lang-key="services.consultation">Konsultasi</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4 data-lang-key="footer.contact">Kontak</h4>
+                    <p><i class="fas fa-envelope"></i> Fathurrahmanhaidi@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +62 821 3832 7266</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <span data-lang-key="footer.location">Surakarta, Indonesia</span></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> Haidi Fathur Rahman. <span data-lang-key="footer.rights">Hak Cipta Dilindungi.</span></p>
+                <div class="footer-langs">
+                    <button class="footer-lang-btn active" data-lang="id">ID</button>
+                    <span>|</span>
+                    <button class="footer-lang-btn" data-lang="en">EN</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/language.js"></script>
+    <script src="assets/js/contact.js"></script>
+</body>
+</html>
