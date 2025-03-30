@@ -194,6 +194,59 @@
     margin-left: 0.5rem;
 }
 
+/* Media queries untuk tampilan mobile */
+@media screen and (max-width: 767px) {
+    .timeline-wrapper::before {
+        left: 30px;
+        transform: none;
+    }
+    
+    .timeline-dot {
+        left: 30px;
+        transform: none;
+    }
+    
+    .timeline-content {
+        width: calc(100% - 80px);
+        float: right;
+        margin-left: 60px;
+    }
+    
+    /* Hapus alternating layout */
+    .timeline-block:nth-child(odd) .timeline-content,
+    .timeline-block:nth-child(even) .timeline-content {
+        float: right;
+    }
+    
+    .timeline-date {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .timeline-title {
+        font-size: 1.3rem;
+    }
+    
+    .timeline-company {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .timeline-content {
+        width: calc(100% - 60px);
+        padding: var(--spacing-md);
+    }
+    
+    .timeline-title {
+        font-size: 1.2rem;
+    }
+    
+    .timeline-details h5 {
+        font-size: 1rem;
+    }
+}
+
 /* Skills Section */
 .experience-skills {
     padding: var(--spacing-xxl) 0;
