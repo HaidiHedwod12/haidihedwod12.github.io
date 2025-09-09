@@ -2033,6 +2033,11 @@ button, .btn {
     color: white;
 }
 
+.dark-mode .contact-preview {
+    background: var(--gradient-dark);
+    color: white;
+}
+
 .contact-content {
     display: flex;
     align-items: center;
