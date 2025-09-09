@@ -1,0 +1,1252 @@
+/* ================================
+   INTERACTIVE JOURNEY MAP STYLES
+   ================================ */
+
+/* Journey Map Section */
+.journey-map-section {
+    padding: var(--spacing-xxl) 0;
+    background: linear-gradient(135deg, #0f1419 0%, #1a202c 30%, #2d3748 70%, #1a202c 100%);
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.journey-map-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(58, 123, 213, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(0, 198, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(58, 123, 213, 0.08) 0%, transparent 80%);
+    pointer-events: none;
+    animation: backgroundPulse 8s ease-in-out infinite;
+}
+
+@keyframes backgroundPulse {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+}
+
+/* Journey Map Container */
+.journey-map {
+    position: relative;
+    height: 600px;
+    margin: var(--spacing-xl) 0;
+    border-radius: var(--border-radius-xl);
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+/* Journey Path SVG */
+.journey-path {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.path-line {
+    animation: pathDraw 3s ease-in-out forwards;
+}
+
+.light-flow {
+    animation: pathDraw 3s ease-in-out forwards, lightFlowMovement 3.5s ease-in-out infinite 4s;
+}
+
+@keyframes pathDraw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes lightFlowMovement {
+    0% {
+        stroke-dashoffset: 1400;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        stroke-dashoffset: -1400;
+        opacity: 0;
+    }
+}
+
+.milestone-marker {
+    opacity: 0;
+    animation: markerAppear 0.8s ease-out forwards;
+}
+
+.milestone-marker:nth-child(4) { animation-delay: 1s; }
+.milestone-marker:nth-child(5) { animation-delay: 1.5s; }
+.milestone-marker:nth-child(6) { animation-delay: 2s; }
+.milestone-marker:nth-child(7) { animation-delay: 2.5s; }
+
+@keyframes markerAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Journey Nodes */
+.journey-nodes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.journey-node {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    animation: nodeFloat 3s ease-in-out infinite;
+}
+
+.journey-node:nth-child(2) { animation-delay: -1s; }
+.journey-node:nth-child(3) { animation-delay: -2s; }
+.journey-node:nth-child(4) { animation-delay: -1.5s; }
+
+@keyframes nodeFloat {
+    0%, 100% { transform: translate(-50%, -50%) translateY(0px); }
+    50% { transform: translate(-50%, -50%) translateY(-8px); }
+}
+
+.journey-node:hover {
+    transform: translate(-50%, -50%) scale(1.2) translateY(-10px);
+    z-index: 10;
+}
+
+/* Node Icon */
+.node-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #3a7bd5 0%, #00c6ff 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: white;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 
+        0 10px 30px rgba(58, 123, 213, 0.4),
+        inset 0 2px 0 rgba(255, 255, 255, 0.3);
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.journey-node:hover .node-icon {
+    box-shadow: 
+        0 20px 50px rgba(58, 123, 213, 0.7),
+        inset 0 2px 0 rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
+.journey-node.active .node-icon {
+    background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
+    animation: activeNodePulse 2s ease-in-out infinite;
+}
+
+@keyframes activeNodePulse {
+    0%, 100% { 
+        box-shadow: 
+            0 10px 30px rgba(255, 107, 107, 0.4),
+            inset 0 2px 0 rgba(255, 255, 255, 0.3);
+    }
+    50% { 
+        box-shadow: 
+            0 20px 50px rgba(255, 107, 107, 0.8),
+            inset 0 2px 0 rgba(255, 255, 255, 0.5);
+    }
+}
+
+.journey-node.future .node-icon {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    opacity: 0.7;
+}
+
+.journey-node.future:hover .node-icon {
+    opacity: 1;
+}
+
+/* Journey Background Elements */
+.journey-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Floating Geometric Shapes */
+.floating-shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(58, 123, 213, 0.1) 0%, rgba(0, 198, 255, 0.1) 100%);
+    animation: floatShape 8s ease-in-out infinite;
+}
+
+.shape-1 {
+    width: 60px;
+    height: 60px;
+    top: 15%;
+    left: 25%;
+    animation-delay: 0s;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+.shape-2 {
+    width: 40px;
+    height: 40px;
+    top: 35%;
+    right: 20%;
+    animation-delay: -2s;
+    border-radius: 0;
+    transform: rotate(45deg);
+}
+
+.shape-3 {
+    width: 80px;
+    height: 80px;
+    bottom: 25%;
+    left: 15%;
+    animation-delay: -4s;
+    border-radius: 50%;
+}
+
+.shape-4 {
+    width: 35px;
+    height: 35px;
+    top: 60%;
+    left: 65%;
+    animation-delay: -1s;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    border-radius: 0;
+}
+
+.shape-5 {
+    width: 50px;
+    height: 50px;
+    top: 20%;
+    right: 15%;
+    animation-delay: -3s;
+    border-radius: 20% 80% 80% 20% / 20% 20% 80% 80%;
+}
+
+.shape-6 {
+    width: 25px;
+    height: 25px;
+    bottom: 30%;
+    right: 35%;
+    animation-delay: -5s;
+    border-radius: 50%;
+}
+
+@keyframes floatShape {
+    0%, 100% { 
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.3;
+    }
+    25% { 
+        transform: translateY(-20px) rotate(90deg);
+        opacity: 0.6;
+    }
+    50% { 
+        transform: translateY(10px) rotate(180deg);
+        opacity: 0.4;
+    }
+    75% { 
+        transform: translateY(-15px) rotate(270deg);
+        opacity: 0.7;
+    }
+}
+
+/* Subtle Grid Pattern */
+.grid-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(58, 123, 213, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(58, 123, 213, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+    0% { 
+        background-position: 0 0, 0 0;
+        opacity: 0.3;
+    }
+    50% { 
+        background-position: 25px 25px, 25px 25px;
+        opacity: 0.6;
+    }
+    100% { 
+        background-position: 50px 50px, 50px 50px;
+        opacity: 0.3;
+    }
+}
+
+/* Year Labels */
+.year-labels {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.year-label {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 8px 16px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transform: translate(-50%, -50%);
+    animation: labelPulse 4s ease-in-out infinite;
+}
+
+.year-label:nth-child(2) { animation-delay: -1s; }
+.year-label:nth-child(3) { animation-delay: -2s; }
+.year-label:nth-child(4) { animation-delay: -3s; }
+
+@keyframes labelPulse {
+    0%, 100% { 
+        opacity: 0.6;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% { 
+        opacity: 0.9;
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+}
+
+/* Milestone Connections - simplified */
+.milestone-connections {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.connection-line {
+    position: absolute;
+    height: 1px;
+    background: rgba(58, 123, 213, 0.2);
+    opacity: 0.5;
+    transform-origin: left center;
+}
+
+/* Interactive Journey Character */
+.journey-character {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.character-container {
+    position: relative;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+}
+
+.character-svg {
+    transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+    animation: characterIdle 4s ease-in-out infinite;
+}
+
+@keyframes characterIdle {
+    0%, 100% { 
+        transform: translateY(0px) rotate(0deg);
+    }
+    25% { 
+        transform: translateY(-3px) rotate(1deg);
+    }
+    50% { 
+        transform: translateY(0px) rotate(0deg);
+    }
+    75% { 
+        transform: translateY(-2px) rotate(-1deg);
+    }
+}
+
+/* Character States */
+.character-svg.mapping {
+    animation: characterMapping 3s ease-in-out infinite;
+}
+
+.character-svg.coding {
+    animation: characterCoding 3s ease-in-out infinite;
+}
+
+.character-svg.engineering {
+    animation: characterEngineering 3s ease-in-out infinite;
+}
+
+.character-svg.dreaming {
+    animation: characterDreaming 4s ease-in-out infinite;
+}
+
+/* Character Animations */
+@keyframes characterMapping {
+    0%, 100% { 
+        transform: translateY(0px) scale(1);
+    }
+    50% { 
+        transform: translateY(-5px) scale(1.05);
+    }
+}
+
+@keyframes characterCoding {
+    0%, 100% { 
+        transform: translateY(0px) rotateY(0deg);
+    }
+    25% { 
+        transform: translateY(-2px) rotateY(5deg);
+    }
+    75% { 
+        transform: translateY(-2px) rotateY(-5deg);
+    }
+}
+
+@keyframes characterEngineering {
+    0%, 100% { 
+        transform: translateY(0px) scale(1) rotateZ(0deg);
+    }
+    33% { 
+        transform: translateY(-3px) scale(1.02) rotateZ(2deg);
+    }
+    66% { 
+        transform: translateY(-1px) scale(1.01) rotateZ(-1deg);
+    }
+}
+
+@keyframes characterDreaming {
+    0%, 100% { 
+        transform: translateY(0px) scale(1);
+    }
+    25% { 
+        transform: translateY(-8px) scale(1.1);
+    }
+    50% { 
+        transform: translateY(-5px) scale(1.05);
+    }
+    75% { 
+        transform: translateY(-10px) scale(1.08);
+    }
+}
+
+/* Character Parts Transitions */
+.character-base * {
+    transition: all 0.4s ease-out;
+}
+
+/* Eyes expressions */
+.character-eyes.excited .eye-left,
+.character-eyes.excited .eye-right {
+    transform: scale(1.2);
+}
+
+.character-eyes.focused .eye-left {
+    transform: translateX(-1px);
+}
+
+.character-eyes.focused .eye-right {
+    transform: translateX(1px);
+}
+
+.character-eyes.happy .eye-left,
+.character-eyes.happy .eye-right {
+    transform: scaleY(0.6);
+}
+
+/* Mouth expressions */
+.character-mouth.happy {
+    d: path("M 93 92 Q 100 98 107 92");
+    stroke-width: 2.5;
+}
+
+.character-mouth.excited {
+    d: path("M 96 90 Q 100 100 104 90");
+    stroke-width: 3;
+}
+
+.character-mouth.focused {
+    d: path("M 98 94 L 102 94");
+    stroke-width: 2;
+}
+
+.character-mouth.dreaming {
+    d: path("M 97 92 Q 100 95 103 92");
+    stroke-width: 2;
+    opacity: 0.8;
+}
+
+/* Arms poses */
+.character-arms.mapping .arm-left {
+    transform: rotate(-45deg);
+}
+
+.character-arms.mapping .arm-right {
+    transform: rotate(30deg);
+}
+
+.character-arms.coding .arm-left {
+    transform: rotate(-30deg);
+}
+
+.character-arms.coding .arm-right {
+    transform: rotate(45deg);
+}
+
+.character-arms.engineering .arm-left {
+    transform: rotate(-20deg);
+}
+
+.character-arms.engineering .arm-right {
+    transform: rotate(20deg);
+}
+
+.character-arms.dreaming .arm-left {
+    transform: rotate(-60deg);
+}
+
+.character-arms.dreaming .arm-right {
+    transform: rotate(-30deg);
+}
+
+/* Hands poses */
+.character-hands.mapping .hand-left {
+    cx: 65;
+    cy: 130;
+}
+
+.character-hands.mapping .hand-right {
+    cx: 125;
+    cy: 145;
+}
+
+.character-hands.coding .hand-left {
+    cx: 75;
+    cy: 135;
+}
+
+.character-hands.coding .hand-right {
+    cx: 135;
+    cy: 130;
+}
+
+.character-hands.engineering .hand-left {
+    cx: 72;
+    cy: 138;
+}
+
+.character-hands.engineering .hand-right {
+    cx: 128;
+    cy: 138;
+}
+
+.character-hands.dreaming .hand-left {
+    cx: 60;
+    cy: 120;
+}
+
+.character-hands.dreaming .hand-right {
+    cx: 110;
+    cy: 130;
+}
+
+/* Thought bubble */
+.thought-bubble {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform-origin: 120px 75px;
+}
+
+.thought-bubble.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.thought-text {
+    font-family: 'Arial', sans-serif;
+    transition: all 0.3s ease;
+}
+
+/* Character Accessories for each milestone */
+.character-accessories {
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.character-accessories.show {
+    opacity: 1;
+}
+
+/* Mapping accessories */
+.accessory-mapping {
+    opacity: 0;
+}
+
+.accessory-mapping.show {
+    opacity: 1;
+}
+
+.mapping-tool {
+    fill: #8B4513;
+    stroke: #654321;
+    stroke-width: 1;
+}
+
+/* Coding accessories */
+.accessory-coding {
+    opacity: 0;
+}
+
+.accessory-coding.show {
+    opacity: 1;
+}
+
+.laptop-screen {
+    fill: #333;
+    rx: 2;
+}
+
+.code-lines {
+    stroke: #00ff00;
+    stroke-width: 1;
+    fill: none;
+}
+
+/* Engineering accessories */
+.accessory-engineering {
+    opacity: 0;
+}
+
+.accessory-engineering.show {
+    opacity: 1;
+}
+
+.hard-hat {
+    fill: #FFD700;
+    stroke: #FFA500;
+    stroke-width: 1;
+}
+
+/* Future accessories */
+.accessory-future {
+    opacity: 0;
+}
+
+.accessory-future.show {
+    opacity: 1;
+}
+
+.future-aura {
+    fill: url(#futureGradient);
+    opacity: 0.6;
+    animation: futureGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes futureGlow {
+    from { opacity: 0.4; }
+    to { opacity: 0.8; }
+}
+
+/* Emotion particles */
+.character-emotions {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.emotion-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.emotion-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: particleFloat 3s ease-out forwards;
+}
+
+@keyframes particleFloat {
+    0% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.3);
+    }
+}
+
+.particle-heart {
+    background: #ff6b9d;
+    animation: particleHeart 2s ease-out forwards;
+}
+
+.particle-star {
+    background: #ffd700;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.particle-code {
+    background: #00ff88;
+    border-radius: 2px;
+    width: 6px;
+    height: 2px;
+}
+
+@keyframes particleHeart {
+    0% {
+        opacity: 1;
+        transform: translateY(0px) scale(1) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-40px) scale(0.5) rotate(180deg);
+    }
+}
+
+/* Achievement Badges */
+.achievement-badge {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    border: 3px solid white;
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+    animation: badgeBounce 1s ease-out infinite alternate;
+    z-index: 3;
+}
+
+@keyframes badgeBounce {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+/* Current Badge */
+.current-badge {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 2px solid white;
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+    animation: currentBlink 2s ease-in-out infinite;
+    z-index: 3;
+}
+
+@keyframes currentBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* Experience Panel */
+.experience-panel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: var(--border-radius-xl);
+    padding: var(--spacing-lg);
+    box-shadow: 
+        0 30px 80px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.2);
+    width: 90%;
+    max-width: 500px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 100;
+}
+
+.experience-panel.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.dark-mode .experience-panel {
+    background: rgba(26, 32, 44, 0.95);
+    color: white;
+}
+
+.panel-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.panel-close:hover {
+    background: rgba(255, 107, 107, 0.8);
+    color: white;
+    transform: scale(1.1);
+}
+
+.experience-header {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.experience-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #3a7bd5 0%, #00c6ff 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    flex-shrink: 0;
+}
+
+.experience-meta h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.dark-mode .experience-meta h3 {
+    color: var(--accent-color);
+}
+
+.experience-meta h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #666;
+}
+
+.dark-mode .experience-meta h4 {
+    color: #ccc;
+}
+
+.experience-duration {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.experience-description {
+    margin: var(--spacing-md) 0;
+    line-height: 1.6;
+    color: #555;
+}
+
+.dark-mode .experience-description {
+    color: #ddd;
+}
+
+/* Skill Tags */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: var(--spacing-md) 0;
+}
+
+.skill-tag {
+    background: linear-gradient(135deg, rgba(58, 123, 213, 0.1) 0%, rgba(0, 198, 255, 0.1) 100%);
+    border: 1px solid rgba(58, 123, 213, 0.3);
+    color: var(--primary-color);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.dark-mode .skill-tag {
+    background: linear-gradient(135deg, rgba(0, 198, 255, 0.2) 0%, rgba(58, 123, 213, 0.2) 100%);
+    border-color: rgba(0, 198, 255, 0.4);
+    color: var(--accent-color);
+}
+
+/* Experience Stats */
+.experience-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .experience-stats {
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+.stat-item {
+    text-align: center;
+    padding: var(--spacing-sm);
+    background: rgba(58, 123, 213, 0.05);
+    border-radius: var(--border-radius-md);
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.dark-mode .stat-label {
+    color: #ccc;
+}
+
+/* Achievement Notification */
+.achievement-notification {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    color: #333;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 20px 40px rgba(255, 215, 0, 0.3);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    transform: translateX(400px);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 1000;
+    max-width: 300px;
+}
+
+.achievement-notification.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.achievement-icon {
+    font-size: 2rem;
+    animation: achievementBounce 1s ease-out infinite alternate;
+}
+
+@keyframes achievementBounce {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.2); }
+}
+
+.achievement-title {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.achievement-desc {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Journey Stats Dashboard */
+.journey-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+    margin: var(--spacing-xl) 0;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.stat-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(58, 123, 213, 0.2);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #3a7bd5 0%, #00c6ff 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    flex-shrink: 0;
+}
+
+.stat-content {
+    flex-grow: 1;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.25rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+/* Journey Button */
+.journey-btn {
+    background: linear-gradient(135deg, #3a7bd5 0%, #00c6ff 100%);
+    border: none;
+    padding: var(--spacing-md) var(--spacing-xl);
+    border-radius: 50px;
+    color: white;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.4s ease;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(58, 123, 213, 0.3);
+}
+
+.journey-btn:hover {
+    background: linear-gradient(135deg, #00c6ff 0%, #3a7bd5 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(58, 123, 213, 0.5);
+    color: white;
+    text-decoration: none;
+}
+
+.journey-btn i {
+    transition: transform 0.3s ease;
+}
+
+.journey-btn:hover i {
+    transform: rotate(180deg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .journey-map {
+        height: 400px;
+        margin: var(--spacing-md) 0;
+    }
+    
+    .journey-node {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .node-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+    
+    .achievement-badge {
+        width: 25px;
+        height: 25px;
+        font-size: 1rem;
+        top: -10px;
+        right: -10px;
+    }
+    
+    .experience-panel {
+        width: 95%;
+        padding: var(--spacing-md);
+    }
+    
+    .journey-stats {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .stat-card {
+        padding: var(--spacing-md);
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .achievement-notification {
+        top: 20px;
+        right: 20px;
+        max-width: 250px;
+        padding: var(--spacing-sm);
+    }
+    
+    /* Background elements responsive */
+    .shape-1, .shape-3 {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .shape-2, .shape-4, .shape-6 {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .shape-5 {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .year-label {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+    }
+    
+    .connection-line {
+        height: 1px;
+    }
+    
+    .grid-pattern {
+        background-size: 30px 30px;
+    }
+    
+    /* Character responsive */
+    .journey-character {
+        top: 8%;
+        left: 8%;
+    }
+    
+    .character-svg {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .thought-bubble ellipse {
+        rx: 20;
+        ry: 12;
+    }
+    
+    .thought-text {
+        font-size: 10px;
+    }
+    
+    .accessory-mapping .mapping-tool {
+        width: 12;
+        height: 2;
+    }
+    
+    .accessory-coding .laptop-screen {
+        width: 16;
+        height: 10;
+    }
+    
+    .accessory-engineering .hard-hat {
+        rx: 20;
+        ry: 10;
+    }
+    
+    .floating-symbols text {
+        font-size: 6px;
+    }
+    
+    .emotion-particle {
+        width: 3px;
+        height: 3px;
+    }
+}

@@ -1,0 +1,125 @@
+{
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "education": "Education",
+      "experience": "Experience",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "hero": {
+      "greeting": "Hello, I'm",
+      "title": "GIS & Mapping Specialist | Data Processing & Automation Specialist | Vibe Coder",
+      "description": "Helping develop innovative geospatial-based solutions, Excel VBA, and AI-assisted application development to solve business and government problems.",
+      "cta": {
+        "projects": "View Projects",
+        "contact": "Contact Me"
+      }
+    },
+    "expertise": {
+      "title": "Core Expertise",
+      "subtitle": "Areas of specialization and capabilities I master",
+      "gis": {
+        "title": "Geographic Information System",
+        "description": "Expert in creating thematic maps, spatial analysis, and facilitating village boundary projects to assist local governments in regional planning."
+      },
+      "excel": {
+        "title": "Excel & VBA",
+        "description": "Developing complex data analysis solutions and process automation with advanced Excel formulas and VBA programming to improve work efficiency."
+      },
+      "ai": {
+        "title": "AI-Assisted Development",
+        "description": "Using AI technology to accelerate the development of Windows applications, Android, and web frontend for business needs and personal branding."
+      }
+    },
+    "projects": {
+      "title": "Latest Projects",
+      "subtitle": "Some of the best work I have completed",
+      "boundary": {
+        "title": "Village Boundary Project",
+        "description": "Facilitation of village boundary mapping for local governments using advanced GIS technology."
+      },
+      "excel": {
+        "title": "Data Automation System",
+        "description": "Development of data input and analysis automation system with Excel VBA for PT. Rekadwipa."
+      },
+      "app": {
+        "title": "Office Documentation App",
+        "description": "Creating documentation and minutes applications with AI assistance for workflow efficiency."
+      },
+      "view": "View Details",
+      "all": "View All Projects"
+    },
+    "experience": {
+      "title": "Work Experience",
+      "subtitle": "My professional journey",
+      "current": {
+        "duration": "2021 - Present",
+        "title": "Data Engineer",
+        "company": "PT. Rekadwipa Teknika Studio",
+        "description": "Focus on creating thematic maps, spatial analysis, and facilitating village boundary projects. Developing automation solutions with Excel VBA and supporting applications to improve efficiency."
+      },
+      "freelance": {
+        "duration": "202 - Present",
+        "title": "Freelance Developer",
+        "company": "Fastwork & Upwork",
+        "description": "Providing GIS, Excel VBA, and AI-Assisted development solution services for various clients on freelance platforms."
+      },
+      "mapping": {
+        "duration": "February - March 2020",
+        "title": "Mapping Team Member",
+        "company": "Gedawung Village Spatial Planning Team, Wonogiri",
+        "description": "Responsible for creating and analyzing maps to support village spatial planning. Collecting and processing spatial data for sustainable village development planning."
+      },
+      "more": "More Experience"
+    },
+    "education": {
+      "title": "Education",
+      "subtitle": "My academic background",
+      "university": {
+        "name": "Sebelas Maret University (UNS)",
+        "degree": "Bachelor of Urban and Regional Planning",
+        "duration": "2017 - 2021",
+        "description": "Faculty of Engineering, Department of Urban and Regional Planning. Active in the Urban Planning Student Association."
+      },
+      "highschool": {
+        "name": "State High School 1 Surakarta",
+        "program": "Science Major",
+        "duration": "2014 - 2017",
+        "extracurricular": "Exspresso / Percussion"
+      }
+    },
+    "contact": {
+      "title": "Let's Work Together!",
+      "description": "Interested in my expertise? Do you have a GIS, Excel VBA, or application development project? Don't hesitate to contact me!",
+      "cta": "Contact Me",
+      "form": {
+        "name": "Full Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message",
+        "submit": "Send Message"
+      }
+    },
+    "footer": {
+      "tagline": "Innovative solutions for regional planning and data analysis",
+      "navigation": "Navigation",
+      "services": "Services",
+      "contact": "Contact",
+      "location": "Surakarta, Indonesia",
+      "rights": "All Rights Reserved."
+    },
+    "services": {
+      "gis": "GIS & Mapping",
+      "excel": "Excel Automation",
+      "development": "Application Development",
+      "consultation": "Consultation"
+    },
+    "about": {
+      "title": "About Me",
+      "subtitle": "GIS Specialist & Solutions Developer",
+      "description": "I am a GIS specialist and solutions developer with over 3 years of experience at PT. Rekadwipa Teknika Studio. With an educational background in Urban and Regional Planning from Sebelas Maret University, I combine academic knowledge with technical expertise to provide the best solutions.",
+      "skills": "Technical Skills",
+      "timeline": "Timeline"
+    }
+  }

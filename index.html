@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haidi Fathur Rahman - GIS Specialist & AI Enthusiast</title>
+    <meta name="description" content="Portofolio profesional Haidi Fathur Rahman, spesialis GIS dan pengembang solusi dengan keahlian di Excel, VBA, dan AI-Assisted Development">
+    
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Utama -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/journey-map.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader">
+        <svg class="logo-animation" width="80" height="80" viewBox="0 0 100 100">
+            <path d="M20,50 A30,30 0 1,1 80,50 A30,30 0 1,1 20,50 Z" fill="none" stroke="url(#gradient)" stroke-width="5"/>
+            <path class="logo-path" d="M30,50 L45,35 L55,65 L70,50" fill="none" stroke="url(#gradient)" stroke-width="5" stroke-linecap="round"/>
+            <text x="50" y="52" text-anchor="middle" dominant-baseline="middle" fill="url(#gradient)" font-family="Poppins" font-size="18" font-weight="600">HFR</text>
+            <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#3a7bd5"/>
+                    <stop offset="100%" stop-color="#3a6073"/>
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <svg width="40" height="40" viewBox="0 0 100 100">
+                            <path d="M20,50 A30,30 0 1,1 80,50 A30,30 0 1,1 20,50 Z" fill="none" stroke="url(#gradient)" stroke-width="5"/>
+                            <path d="M30,50 L45,35 L55,65 L70,50" fill="none" stroke="url(#gradient)" stroke-width="5" stroke-linecap="round"/>
+                            <text x="50" y="52" text-anchor="middle" dominant-baseline="middle" fill="url(#gradient)" font-family="Poppins" font-size="18" font-weight="600">HFR</text>
+                        </svg>
+                        <span>Haidi Fathur Rahman</span>
+                    </a>
+                </div>
+                
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="index.html" class="active" data-lang-key="nav.home">Beranda</a></li>
+                        <li><a href="about.html" data-lang-key="nav.about">Tentang</a></li>
+                        <li><a href="education.html" data-lang-key="nav.education">Pendidikan</a></li>
+                        <li><a href="experience.html" data-lang-key="nav.experience">Pengalaman</a></li>
+                        <li><a href="projects.html" data-lang-key="nav.projects">Proyek</a></li>
+                        <li><a href="contact.html" data-lang-key="nav.contact">Kontak</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-controls">
+                    <div class="language-selector">
+                        <button class="lang-btn active" data-lang="id">ID</button>
+                        <span>|</span>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                    
+                    <button class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    
+                    <button class="mobile-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="animate-in">
+                        <span data-lang-key="hero.greeting">Halo, Saya</span>
+                        <span class="highlight">Haidi Fathur Rahman</span>
+                    </h1>
+                    <h2 class="animate-in delay-1">
+                        <span data-lang-key="hero.title">Spesialis GIS & Pemetaan | Spesialis Data & Otomasi | Vibe Coder</span>
+                    </h2>
+                    <p class="animate-in delay-2" data-lang-key="hero.description">
+                        Membantu mengembangkan solusi inovatif berbasis geospasial, Excel VBA, dan 
+                        pengembangan aplikasi dengan bantuan AI untuk memecahkan masalah.
+                    </p>
+                    <div class="hero-cta animate-in delay-3">
+                        <a href="projects.html" class="btn btn-primary" data-lang-key="hero.cta.projects">
+                            Lihat Proyek
+                        </a>
+                        <a href="contact.html" class="btn btn-secondary" data-lang-key="hero.cta.contact">
+                            Hubungi Saya
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image animate-in delay-2">
+                    <div class="profile-picture-container">
+                        <!-- Placeholder for your profile image -->
+                        <div class="profile-picture"></div>
+                        <div class="geometric-overlay"></div>
+                    </div>
+                    <div class="floating-skill skill-1">GIS</div>
+                    <div class="floating-skill skill-2">Excel VBA</div>
+                    <div class="floating-skill skill-3">AI Solutions</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-background">
+            <div class="hero-gradient"></div>
+            <div class="hero-pattern"></div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section class="expertise-interactive">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-lang-key="expertise.title">Keahlian Utama</h2>
+                <p class="section-subtitle" data-lang-key="expertise.subtitle">Area spesialisasi dan kemampuan yang saya kuasai</p>
+            </div>
+            
+            <div class="expertise-interactive-wrapper">
+                <!-- GIS & Mapping -->
+                <div class="expertise-interactive-section clickable" data-category="gis">
+                    <h3 class="expertise-category-title" data-lang-key="expertise.gis.category">GIS & Pemetaan</h3>
+                    <div class="floating-icons">
+                        <div class="floating-icon" data-delay="0">
+                            <img src="assets/img/skills/GIS/Logo Arcgis.png" alt="ArcGIS">
+                            <span class="icon-tooltip">ArcGIS</span>
+                        </div>
+                        <div class="floating-icon" data-delay="1">
+                            <img src="assets/img/skills/GIS/Logo QGIS.png" alt="QGIS">
+                            <span class="icon-tooltip">QGIS</span>
+                        </div>
+                        <div class="floating-icon" data-delay="2">
+                            <img src="assets/img/skills/GIS/Logo Goole Earth.png" alt="Google Earth">
+                            <span class="icon-tooltip">Google Earth</span>
+                        </div>
+                        <div class="floating-icon" data-delay="0.7">
+                            <img src="assets/img/skills/GIS/Logo GEE.png" alt="Google Earth Engine" class="remove-bg">
+                            <span class="icon-tooltip">Google Earth Engine</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data & Automation -->
+                <div class="expertise-interactive-section clickable" data-category="data">
+                    <h3 class="expertise-category-title" data-lang-key="expertise.data.category">Data & Otomasi</h3>
+                    <div class="floating-icons">
+                        <div class="floating-icon" data-delay="0.5">
+                            <img src="assets/img/skills/Data/Logo Excel.png" alt="Excel">
+                            <span class="icon-tooltip">Excel</span>
+                        </div>
+                        <div class="floating-icon" data-delay="1.5">
+                            <img src="assets/img/skills/Data/Logo VBA.png" alt="VBA">
+                            <span class="icon-tooltip">VBA</span>
+                        </div>
+                        <div class="floating-icon" data-delay="1.0">
+                            <img src="assets/img/skills/Data/Logo Word.png" alt="Word">
+                            <span class="icon-tooltip">Word</span>
+                        </div>
+                        <div class="floating-icon" data-delay="2.0">
+                            <img src="assets/img/skills/Data/Logo Powerpoint.png" alt="PowerPoint">
+                            <span class="icon-tooltip">PowerPoint</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vibe Coder -->
+                <div class="expertise-interactive-section clickable" data-category="code">
+                    <h3 class="expertise-category-title" data-lang-key="expertise.code.category">Vibe Coder</h3>
+                    <div class="floating-icons">
+                        <div class="floating-icon" data-delay="0.3">
+                            <img src="assets/img/skills/Code/Logo Chatgpt.png" alt="ChatGPT">
+                            <span class="icon-tooltip">ChatGPT</span>
+                        </div>
+                        <div class="floating-icon" data-delay="1.3">
+                            <img src="assets/img/skills/Code/Logo Claude.png" alt="Claude">
+                            <span class="icon-tooltip">Claude</span>
+                        </div>
+                        <div class="floating-icon" data-delay="0.8">
+                            <img src="assets/img/skills/Code/Logo Deepseek.png" alt="DeepSeek">
+                            <span class="icon-tooltip">DeepSeek</span>
+                        </div>
+                        <div class="floating-icon" data-delay="1.8">
+                            <img src="assets/img/skills/Code/Logo v0.png" alt="v0">
+                            <span class="icon-tooltip">v0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Preview Section -->
+    <section class="projects-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-lang-key="projects.title">Proyek Terbaru</h2>
+                <p class="section-subtitle" data-lang-key="projects.subtitle">Beberapa pekerjaan terbaik yang telah saya selesaikan</p>
+            </div>
+            
+            <div class="projects-carousel-container">
+                <div class="projects-carousel">
+                    <div class="project-card-scroll">
+                        <div class="project-image" style="background-image: url('assets/img/projects/village-boundaries.jpg');">
+                            <div class="project-overlay">
+                                <span class="project-category">GIS</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 data-lang-key="projects.boundary.title">Proyek Batas Desa</h3>
+                            <p data-lang-key="projects.boundary.description">
+                                Fasilitasi pembuatan peta batas desa untuk pemerintah daerah menggunakan teknologi GIS lanjutan.
+                            </p>
+                            <a href="projects.html#boundary" class="btn btn-text" data-lang-key="projects.view">Lihat Detail</a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card-scroll">
+                        <div class="project-image" style="background-image: url('assets/img/projects/excel-automation.jpg');">
+                            <div class="project-overlay">
+                                <span class="project-category">Excel VBA</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 data-lang-key="projects.excel.title">Sistem Otomatisasi Data</h3>
+                            <p data-lang-key="projects.excel.description">
+                                Pengembangan sistem otomatisasi input dan analisis data dengan Excel VBA untuk PT. Rekadwipa.
+                            </p>
+                            <a href="projects.html#excel" class="btn btn-text" data-lang-key="projects.view">Lihat Detail</a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card-scroll">
+                        <div class="project-image" style="background-image: url('assets/img/projects/app-development.jpg');">
+                            <div class="project-overlay">
+                                <span class="project-category">AI-Assisted</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 data-lang-key="projects.app.title">Aplikasi Dokumentasi Kantor</h3>
+                            <p data-lang-key="projects.app.description">
+                                Pembuatan aplikasi dokumentasi dan notulensi dengan bantuan AI untuk efisiensi workflow.
+                            </p>
+                            <a href="projects.html#app" class="btn btn-text" data-lang-key="projects.view">Lihat Detail</a>
+                        </div>
+                    </div>
+
+                    <!-- Additional projects for seamless loop -->
+                    <div class="project-card-scroll">
+                        <div class="project-image" style="background-image: url('assets/img/projects/spatial-analysis.jpg');">
+                            <div class="project-overlay">
+                                <span class="project-category">Analysis</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 data-lang-key="projects.spatial.title">Analisis Spasial</h3>
+                            <p data-lang-key="projects.spatial.description">Analisis data spasial menggunakan teknologi GIS untuk mendukung pengambilan keputusan berbasis lokasi.</p>
+                            <a href="projects.html#spatial" class="btn btn-text" data-lang-key="projects.view">Lihat Detail</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card-scroll">
+                        <div class="project-image" style="background-image: url('assets/img/projects/thematic-mapping.jpg');">
+                            <div class="project-overlay">
+                                <span class="project-category">Mapping</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 data-lang-key="projects.thematic.title">Pemetaan Tematik</h3>
+                            <p data-lang-key="projects.thematic.description">Pembuatan peta tematik berkualitas tinggi untuk visualisasi data dan informasi geospasial.</p>
+                            <a href="projects.html#thematic" class="btn btn-text" data-lang-key="projects.view">Lihat Detail</a>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate set for seamless infinite scroll -->
+                    <div class="project-card-scroll">
+                        <div class="project-image" style="background-image: url('assets/img/projects/village-boundaries.jpg');">
+                            <div class="project-overlay">
+                                <span class="project-category">GIS</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 data-lang-key="projects.boundary.title">Proyek Batas Desa</h3>
+                            <p data-lang-key="projects.boundary.description">
+                                Fasilitasi pembuatan peta batas desa untuk pemerintah daerah menggunakan teknologi GIS lanjutan.
+                            </p>
+                            <a href="projects.html#boundary" class="btn btn-text" data-lang-key="projects.view">Lihat Detail</a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card-scroll">
+                        <div class="project-image" style="background-image: url('assets/img/projects/excel-automation.jpg');">
+                            <div class="project-overlay">
+                                <span class="project-category">Excel VBA</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 data-lang-key="projects.excel.title">Sistem Otomatisasi Data</h3>
+                            <p data-lang-key="projects.excel.description">
+                                Pengembangan sistem otomatisasi input dan analisis data dengan Excel VBA untuk PT. Rekadwipa.
+                            </p>
+                            <a href="projects.html#excel" class="btn btn-text" data-lang-key="projects.view">Lihat Detail</a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card-scroll">
+                        <div class="project-image" style="background-image: url('assets/img/projects/app-development.jpg');">
+                            <div class="project-overlay">
+                                <span class="project-category">AI-Assisted</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 data-lang-key="projects.app.title">Aplikasi Dokumentasi Kantor</h3>
+                            <p data-lang-key="projects.app.description">
+                                Pembuatan aplikasi dokumentasi dan notulensi dengan bantuan AI untuk efisiensi workflow.
+                            </p>
+                            <a href="projects.html#app" class="btn btn-text" data-lang-key="projects.view">Lihat Detail</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card-scroll">
+                        <div class="project-image" style="background-image: url('assets/img/projects/spatial-analysis.jpg');">
+                            <div class="project-overlay">
+                                <span class="project-category">Analysis</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Analisis Spasial</h3>
+                            <p>Analisis data spasial menggunakan teknologi GIS untuk mendukung pengambilan keputusan berbasis lokasi.</p>
+                            <a href="projects.html#spatial" class="btn btn-text" data-lang-key="projects.view">Lihat Detail</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card-scroll">
+                        <div class="project-image" style="background-image: url('assets/img/projects/thematic-mapping.jpg');">
+                            <div class="project-overlay">
+                                <span class="project-category">Mapping</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Pemetaan Tematik</h3>
+                            <p>Pembuatan peta tematik berkualitas tinggi untuk visualisasi data dan informasi geospasial.</p>
+                            <a href="projects.html#thematic" class="btn btn-text" data-lang-key="projects.view">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="projects-cta">
+                <a href="projects.html" class="btn btn-primary" data-lang-key="projects.all">Lihat Semua Proyek</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Journey Map Experience -->
+    <section class="journey-map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-lang-key="experience.title">Perjalanan Karir</h2>
+                <p class="section-subtitle" data-lang-key="experience.subtitle">Ikuti petualangan profesional saya</p>
+            </div>
+            
+            <!-- Journey Map Container -->
+            <div class="journey-map">
+                <!-- Animated Path SVG -->
+                <svg class="journey-path" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid meet">
+                    <defs>
+                        <linearGradient id="pathGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#3a7bd5;stop-opacity:0.3" />
+                            <stop offset="50%" style="stop-color:#00c6ff;stop-opacity:0.6" />
+                            <stop offset="100%" style="stop-color:#3a7bd5;stop-opacity:0.9" />
+                        </linearGradient>
+                        <linearGradient id="lightGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#00c6ff;stop-opacity:0" />
+                            <stop offset="30%" style="stop-color:#00c6ff;stop-opacity:0.8" />
+                            <stop offset="50%" style="stop-color:#ffffff;stop-opacity:1" />
+                            <stop offset="70%" style="stop-color:#00c6ff;stop-opacity:0.8" />
+                            <stop offset="100%" style="stop-color:#00c6ff;stop-opacity:0" />
+                        </linearGradient>
+                        <radialGradient id="futureGradient" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.8" />
+                            <stop offset="50%" style="stop-color:#00c6ff;stop-opacity:0.4" />
+                            <stop offset="100%" style="stop-color:#3a7bd5;stop-opacity:0.2" />
+                        </radialGradient>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                            <feMerge> 
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/> 
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    
+                    <!-- Main Journey Path -->
+                    <path class="path-line" d="M 100 500 Q 300 400 500 450 Q 700 500 900 350 Q 1000 300 1100 250" 
+                          stroke="url(#pathGradient)" stroke-width="6" fill="none" 
+                          stroke-dasharray="1400" stroke-dashoffset="1400" filter="url(#glow)"/>
+                    
+                    <!-- Light Flow Effect -->
+                    <path class="light-flow" d="M 100 500 Q 300 400 500 450 Q 700 500 900 350 Q 1000 300 1100 250" 
+                          stroke="url(#lightGradient)" stroke-width="8" fill="none" 
+                          stroke-dasharray="100 1300" stroke-dashoffset="1400" 
+                          opacity="0" filter="url(#glow)"/>
+                    
+                    <!-- Milestone Markers -->
+                    <circle class="milestone-marker" cx="100" cy="500" r="8" fill="#3a7bd5"/>
+                    <circle class="milestone-marker" cx="500" cy="450" r="8" fill="#00c6ff"/>  
+                    <circle class="milestone-marker" cx="900" cy="350" r="8" fill="#3a7bd5"/>
+                    <circle class="milestone-marker" cx="1100" cy="250" r="8" fill="#00c6ff"/>
+                </svg>
+                
+                <!-- Journey Nodes -->
+                <div class="journey-nodes">
+                    <!-- Node 1: Mapping Specialist -->
+                    <div class="journey-node" data-node="1" style="left: 8%; top: 75%;">
+                        <div class="node-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <div class="achievement-badge">🗺️</div>
+                    </div>
+                    
+                    <!-- Node 2: Freelance Developer -->
+                    <div class="journey-node" data-node="2" style="left: 42%; top: 65%;">
+                        <div class="node-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="achievement-badge">💼</div>
+                    </div>
+                    
+                    <!-- Node 3: Data Engineer -->
+                    <div class="journey-node active" data-node="3" style="left: 75%; top: 45%;">
+                        <div class="node-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="achievement-badge">🚀</div>
+                        <div class="current-badge">CURRENT</div>
+                    </div>
+                    
+                    <!-- Node 4: Future Goals -->
+                    <div class="journey-node future" data-node="4" style="left: 92%; top: 30%;">
+                        <div class="node-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="achievement-badge">⭐</div>
+                    </div>
+                </div>
+                
+                <!-- Background Elements -->
+                <div class="journey-background">
+                    <!-- Floating Geometric Shapes -->
+                    <div class="floating-shapes">
+                        <div class="shape shape-1"></div>
+                        <div class="shape shape-2"></div>
+                        <div class="shape shape-3"></div>
+                        <div class="shape shape-4"></div>
+                        <div class="shape shape-5"></div>
+                        <div class="shape shape-6"></div>
+                    </div>
+                    
+                    <!-- Subtle Grid Pattern -->
+                    <div class="grid-pattern"></div>
+                    
+                    <!-- Year Labels -->
+                    <div class="year-labels">
+                        <div class="year-label" style="left: 8%; top: 90%;">2020</div>
+                        <div class="year-label" style="left: 42%; top: 80%;">2020-2024</div>
+                        <div class="year-label" style="left: 75%; top: 60%;">2021-2024</div>
+                        <div class="year-label" style="left: 92%; top: 45%;">Future</div>
+                    </div>
+                    
+                    <!-- Milestone Connections -->
+                    <div class="milestone-connections">
+                        <div class="connection-line" style="left: 15%; top: 70%; width: 22%; transform: rotate(8deg);"></div>
+                        <div class="connection-line" style="left: 52%; top: 55%; width: 18%; transform: rotate(-12deg);"></div>
+                        <div class="connection-line" style="left: 82%; top: 40%; width: 8%; transform: rotate(-15deg);"></div>
+                    </div>
+                    
+                </div>
+                
+                <!-- Interactive Character -->
+                <div class="journey-character" id="journey-character">
+                    <div class="character-container">
+                        <!-- Character SVG -->
+                        <svg class="character-svg" viewBox="0 0 200 200" width="120" height="120">
+                            <!-- Character Base -->
+                            <g class="character-base">
+                                <!-- Head -->
+                                <circle class="character-head" cx="100" cy="80" r="35" fill="#ffd6b3"/>
+                                
+                                <!-- Hair -->
+                                <path class="character-hair" d="M 70 55 Q 100 40 130 55 Q 135 65 130 75 Q 100 60 70 75 Q 65 65 70 55" fill="#4a3728"/>
+                                
+                                <!-- Eyes -->
+                                <g class="character-eyes">
+                                    <circle class="eye-left" cx="90" cy="75" r="4" fill="#333"/>
+                                    <circle class="eye-right" cx="110" cy="75" r="4" fill="#333"/>
+                                    <circle class="eye-left-shine" cx="92" cy="73" r="1.5" fill="#fff"/>
+                                    <circle class="eye-right-shine" cx="112" cy="73" r="1.5" fill="#fff"/>
+                                </g>
+                                
+                                <!-- Nose -->
+                                <circle class="character-nose" cx="100" cy="85" r="1.5" fill="#ffb380"/>
+                                
+                                <!-- Mouth -->
+                                <path class="character-mouth" d="M 95 92 Q 100 96 105 92" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round"/>
+                                
+                                <!-- Body -->
+                                <ellipse class="character-body" cx="100" cy="135" rx="25" ry="35" fill="#3a7bd5"/>
+                                
+                                <!-- Arms -->
+                                <g class="character-arms">
+                                    <ellipse class="arm-left" cx="75" cy="125" rx="8" ry="20" fill="#ffd6b3" transform="rotate(-15 75 125)"/>
+                                    <ellipse class="arm-right" cx="125" cy="125" rx="8" ry="20" fill="#ffd6b3" transform="rotate(15 125 125)"/>
+                                </g>
+                                
+                                <!-- Hands -->
+                                <g class="character-hands">
+                                    <circle class="hand-left" cx="70" cy="140" r="6" fill="#ffd6b3"/>
+                                    <circle class="hand-right" cx="130" cy="140" r="6" fill="#ffd6b3"/>
+                                </g>
+                                
+                                <!-- Legs -->
+                                <g class="character-legs">
+                                    <ellipse class="leg-left" cx="90" cy="175" rx="8" ry="15" fill="#2c5ba0"/>
+                                    <ellipse class="leg-right" cx="110" cy="175" rx="8" ry="15" fill="#2c5ba0"/>
+                                </g>
+                            </g>
+                            
+                            <!-- Accessories (will change based on milestone) -->
+                            <g class="character-accessories" id="character-accessories">
+                                <!-- Default: Casual look -->
+                                <g class="accessory-default">
+                                    <circle class="casual-button" cx="100" cy="125" r="2" fill="#fff" opacity="0.8"/>
+                                </g>
+                                
+                                <!-- Mapping accessories -->
+                                <g class="accessory-mapping" style="opacity: 0;">
+                                    <rect class="mapping-tool" x="125" y="135" width="15" height="3" rx="1"/>
+                                    <circle class="compass" cx="132" cy="132" r="4" fill="#8B4513" stroke="#654321" stroke-width="1"/>
+                                    <path d="M 130 130 L 134 134 M 130 134 L 134 130" stroke="#654321" stroke-width="1"/>
+                                </g>
+                                
+                                <!-- Coding accessories -->
+                                <g class="accessory-coding" style="opacity: 0;">
+                                    <rect class="laptop-screen" x="120" y="130" width="20" height="12" rx="2" fill="#333"/>
+                                    <rect x="122" y="132" width="16" height="8" fill="#000"/>
+                                    <path class="code-lines" d="M 124 134 L 127 134 M 124 136 L 130 136 M 124 138 L 126 138" stroke="#00ff00" stroke-width="0.5"/>
+                                </g>
+                                
+                                <!-- Engineering accessories -->
+                                <g class="accessory-engineering" style="opacity: 0;">
+                                    <ellipse class="hard-hat" cx="100" cy="60" rx="25" ry="12" fill="#FFD700" stroke="#FFA500" stroke-width="1"/>
+                                    <rect x="95" y="55" width="10" height="3" fill="#FFA500"/>
+                                    <circle cx="100" cy="56" r="2" fill="#FF8C00"/>
+                                </g>
+                                
+                                <!-- Future accessories -->
+                                <g class="accessory-future" style="opacity: 0;">
+                                    <circle class="future-aura" cx="100" cy="100" r="60" fill="url(#futureGradient)" opacity="0.6"/>
+                                    <g class="floating-symbols">
+                                        <text x="130" y="90" font-size="8" fill="#00c6ff" opacity="0.8">AI</text>
+                                        <text x="70" y="110" font-size="6" fill="#3a7bd5" opacity="0.7">∞</text>
+                                        <text x="120" y="120" font-size="7" fill="#00c6ff" opacity="0.8">⚡</text>
+                                    </g>
+                                </g>
+                            </g>
+                            
+                            <!-- Thought bubble -->
+                            <g class="thought-bubble" id="thought-bubble">
+                                <ellipse cx="140" cy="60" rx="25" ry="15" fill="rgba(255,255,255,0.9)" stroke="#ddd" stroke-width="1"/>
+                                <circle cx="125" cy="70" r="3" fill="rgba(255,255,255,0.7)"/>
+                                <circle cx="120" cy="75" r="2" fill="rgba(255,255,255,0.5)"/>
+                                <text class="thought-text" x="140" y="65" text-anchor="middle" font-size="12" fill="#666">👋</text>
+                            </g>
+                        </svg>
+                        
+                        <!-- Character emotions overlay -->
+                        <div class="character-emotions" id="character-emotions">
+                            <div class="emotion-particles"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience Details Panel -->
+                <div class="experience-panel" id="experience-panel">
+                    <button class="panel-close" onclick="closeExperiencePanel()">×</button>
+                    <div class="panel-content">
+                        <div class="experience-header">
+                            <div class="experience-icon">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <div class="experience-meta">
+                                <h3 class="experience-title">Anggota Bagian Pemetaan</h3>
+                                <h4 class="experience-company">Tim Penyusunan Rencana Tata Ruang Desa</h4>
+                                <div class="experience-duration">Februari - Maret 2020</div>
+                            </div>
+                        </div>
+                        
+                        <div class="experience-description">
+                            <p>Bertanggung jawab dalam pembuatan dan analisis peta untuk mendukung penyusunan rencana tata ruang desa. Mengumpulkan dan mengolah data spasial untuk perencanaan pembangunan desa yang berkelanjutan.</p>
+                        </div>
+                        
+                        <div class="skill-tags">
+                            <span class="skill-tag">GIS Mapping</span>
+                            <span class="skill-tag">Spatial Analysis</span>
+                            <span class="skill-tag">Data Collection</span>
+                            <span class="skill-tag">Urban Planning</span>
+                        </div>
+                        
+                        <div class="experience-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">2</div>
+                                <div class="stat-label">Months</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">5</div>
+                                <div class="stat-label">Maps Created</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">1</div>
+                                <div class="stat-label">Village</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Floating Achievement Notifications -->
+                <div class="achievement-notification" id="achievement-notification">
+                    <div class="achievement-icon">🏆</div>
+                    <div class="achievement-text">
+                        <div class="achievement-title">Achievement Unlocked!</div>
+                        <div class="achievement-desc">First Professional Experience</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Journey Stats Dashboard -->
+            <div class="journey-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number" data-count="4">0</div>
+                        <div class="stat-label" data-lang-key="stats.experience">Tahun Pengalaman</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number" data-count="50">0</div>
+                        <div class="stat-label" data-lang-key="stats.projects">Proyek Selesai</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number" data-count="25">0</div>
+                        <div class="stat-label" data-lang-key="stats.clients">Klien Puas</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number" data-count="8">0</div>
+                        <div class="stat-label" data-lang-key="stats.technologies">Teknologi</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="experience-cta">
+                <a href="experience.html" class="btn btn-primary journey-btn" data-lang-key="experience.explore">
+                    <i class="fas fa-compass"></i>
+                    Jelajahi Selengkapnya
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Preview -->
+    <section class="contact-preview">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-text">
+                    <h2 data-lang-key="contact.title">Mari Bekerja Sama!</h2>
+                    <p data-lang-key="contact.description">
+                        Tertarik dengan keahlian saya? Apakah Anda memiliki proyek GIS, 
+                        Excel VBA, atau pengembangan aplikasi? Jangan ragu untuk menghubungi saya!
+                    </p>
+                    <a href="contact.html" class="btn btn-primary" data-lang-key="contact.cta">Hubungi Saya</a>
+                </div>
+                
+                <div class="contact-social">
+                    <a href="https://www.linkedin.com/in/haidi-fathur-rahman" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/HaidiHedwod12" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://instagram.com/fathurrahmanhaidi/" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://fastwork.id/user/haidifr" target="_blank" rel="noopener noreferrer" class="social-link fastwork-link" title="Fastwork">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.568 8.16l-3.92 3.92c-.784.784-2.048.784-2.832 0l-2.624-2.624c-.392-.392-.392-1.024 0-1.416s1.024-.392 1.416 0l2.624 2.624c.392.392 1.024.392 1.416 0l3.92-3.92c.392-.392 1.024-.392 1.416 0s.392 1.024 0 1.416z"/>
+                            <path d="M8.4 12.8l1.6 1.6L16 8.4"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <svg width="40" height="40" viewBox="0 0 100 100">
+                        <path d="M20,50 A30,30 0 1,1 80,50 A30,30 0 1,1 20,50 Z" fill="none" stroke="url(#gradient)" stroke-width="5"/>
+                        <path d="M30,50 L45,35 L55,65 L70,50" fill="none" stroke="url(#gradient)" stroke-width="5" stroke-linecap="round"/>
+                        <text x="50" y="52" text-anchor="middle" dominant-baseline="middle" fill="url(#gradient)" font-family="Poppins" font-size="18" font-weight="600">HFR</text>
+                    </svg>
+                    <p data-lang-key="footer.tagline">Solusi inovatif untuk perencanaan wilayah dan analisis data</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h4 data-lang-key="footer.navigation">Navigasi</h4>
+                        <ul>
+                            <li><a href="index.html" data-lang-key="nav.home">Beranda</a></li>
+                            <li><a href="about.html" data-lang-key="nav.about">Tentang</a></li>
+                            <li><a href="education.html" data-lang-key="nav.education">Pendidikan</a></li>
+                            <li><a href="experience.html" data-lang-key="nav.experience">Pengalaman</a></li>
+                            <li><a href="projects.html" data-lang-key="nav.projects">Proyek</a></li>
+                            <li><a href="contact.html" data-lang-key="nav.contact">Kontak</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links-column">
+                        <h4 data-lang-key="footer.services">Layanan</h4>
+                        <ul>
+                            <li><a href="#" data-lang-key="services.gis">GIS & Pemetaan</a></li>
+                            <li><a href="#" data-lang-key="services.excel">Otomatisasi Excel</a></li>
+                            <li><a href="#" data-lang-key="services.development">Pengembangan Aplikasi</a></li>
+                            <li><a href="#" data-lang-key="services.consultation">Konsultasi</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4 data-lang-key="footer.contact">Kontak</h4>
+                    <p><i class="fas fa-envelope"></i> Fathurrahmanhaidi@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +62 821 3832 7266</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <span data-lang-key="footer.location">Surakarta, Indonesia</span></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> Haidi Fathur Rahman. <span data-lang-key="footer.rights">Hak Cipta Dilindungi.</span></p>
+                <div class="footer-langs">
+                    <button class="footer-lang-btn active" data-lang="id">ID</button>
+                    <span>|</span>
+                    <button class="footer-lang-btn" data-lang="en">EN</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Expertise Modal -->
+    <div id="expertiseModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="modal-close" aria-label="Close Modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-category-title">
+                    <h2 id="modalTitle">GIS & Pemetaan</h2>
+                </div>
+                
+                <div class="modal-icons">
+                    <div id="modalIconsContainer">
+                        <!-- Icons will be dynamically inserted here -->
+                    </div>
+                </div>
+                
+                <div class="modal-description">
+                    <div class="experience-badge">
+                        <span id="modalExperience">7+ Tahun Pengalaman</span>
+                    </div>
+                    <p id="modalDescription">
+                        Saya telah menguasai berbagai aplikasi GIS selama lebih dari 7 tahun...
+                    </p>
+                    
+                    <div class="modal-highlights">
+                        <h4 data-lang-key="modal.highlights.title">Yang Bisa Saya Berikan:</h4>
+                        <ul id="modalHighlights">
+                            <!-- Highlights will be dynamically inserted -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-overlay"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/language.js"></script>
+    <script src="assets/js/expertise-modal.js"></script>
+    <script src="assets/js/projects-scroll-simple.js"></script>
+    <script src="assets/js/journey-map.js"></script>
+    <script src="assets/js/journey-character.js"></script>
+</body>
+</html>

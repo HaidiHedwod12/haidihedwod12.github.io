@@ -1,0 +1,125 @@
+{
+    "nav": {
+      "home": "Beranda",
+      "about": "Tentang",
+      "education": "Pendidikan",
+      "experience": "Pengalaman",
+      "projects": "Proyek",
+      "contact": "Kontak"
+    },
+    "hero": {
+      "greeting": "Halo, Saya",
+      "title": "Spesialis GIS & Pemetaan | Spesialis Data & Otomasi | Vibe Coder",
+      "description": "Membantu mengembangkan solusi inovatif berbasis geospasial, Excel VBA, dan pengembangan aplikasi dengan bantuan AI untuk memecahkan masalah bisnis dan pemerintahan.",
+      "cta": {
+        "projects": "Lihat Proyek",
+        "contact": "Hubungi Saya"
+      }
+    },
+    "expertise": {
+      "title": "Keahlian Utama",
+      "subtitle": "Area spesialisasi dan kemampuan yang saya kuasai",
+      "gis": {
+        "title": "Geographic Information System",
+        "description": "Ahli dalam pembuatan peta tematik, analisis spasial, dan fasilitasi proyek batas desa untuk membantu pemerintah daerah dalam perencanaan wilayah."
+      },
+      "excel": {
+        "title": "Excel & VBA",
+        "description": "Mengembangkan solusi analisis data kompleks dan otomatisasi proses dengan formula lanjutan Excel dan pemrograman VBA untuk meningkatkan efisiensi kerja."
+      },
+      "ai": {
+        "title": "AI-Assisted Development",
+        "description": "Menggunakan teknologi AI untuk mempercepat pengembangan aplikasi Windows, Android, dan web frontend untuk kebutuhan bisnis dan personal branding."
+      }
+    },
+    "projects": {
+      "title": "Proyek Terbaru",
+      "subtitle": "Beberapa pekerjaan terbaik yang telah saya selesaikan",
+      "boundary": {
+        "title": "Proyek Batas Desa",
+        "description": "Fasilitasi pembuatan peta batas desa untuk pemerintah daerah menggunakan teknologi GIS lanjutan."
+      },
+      "excel": {
+        "title": "Sistem Otomatisasi Data",
+        "description": "Pengembangan sistem otomatisasi input dan analisis data dengan Excel VBA untuk PT. Rekadwipa."
+      },
+      "app": {
+        "title": "Aplikasi Dokumentasi Kantor",
+        "description": "Pembuatan aplikasi dokumentasi dan notulensi dengan bantuan AI untuk efisiensi workflow."
+      },
+      "view": "Lihat Detail",
+      "all": "Lihat Semua Proyek"
+    },
+    "experience": {
+      "title": "Pengalaman Kerja",
+      "subtitle": "Perjalanan profesional saya",
+      "current": {
+        "duration": "2021 - Sekarang",
+        "title": "Data Engineer",
+        "company": "PT. Rekadwipa Teknika Studio",
+        "description": "Fokus pada pembuatan peta tematik, analisis spasial, dan fasilitasi proyek batas desa. Mengembangkan solusi otomatisasi dengan Excel VBA dan aplikasi pendukung untuk meningkatkan efisiensi."
+      },
+      "freelance": {
+        "duration": "2021 - Sekarang",
+        "title": "Freelance Developer",
+        "company": "Fastwork & Upwork",
+        "description": "Menyediakan layanan pengembangan solusi GIS, Excel VBA, dan AI-Assisted development untuk berbagai klien di platform freelance."
+       },
+      "mapping": {
+        "duration": "Februari - Maret 2020",
+        "title": "Anggota Bagian Pemetaan",
+        "company": "Tim Penyusunan Rencana Tata Ruang Desa Gedawung, Wonogiri",
+        "description": "Bertanggung jawab dalam pembuatan dan analisis peta untuk mendukung penyusunan rencana tata ruang desa. Mengumpulkan dan mengolah data spasial untuk perencanaan pembangunan desa yang berkelanjutan."
+    },
+      "more": "Lebih Banyak Pengalaman"
+    },
+    "education": {
+      "title": "Pendidikan",
+      "subtitle": "Latar belakang akademis saya",
+      "university": {
+        "name": "Universitas Sebelas Maret (UNS)",
+        "degree": "Sarjana Perencanaan Wilayah dan Kota",
+        "duration": "2017 - 2021",
+        "description": "Fakultas Teknik, Program Studi Perencanaan Wilayah dan Kota. Aktif dalam Himpunan Mahasiswa PWK."
+      },
+      "highschool": {
+        "name": "SMA Negeri 1 Surakarta",
+        "program": "Jurusan IPA",
+        "duration": "2014 - 2017",
+        "extracurricular": "Exspresso / Perkusi"
+      }
+    },
+    "contact": {
+      "title": "Mari Bekerja Sama!",
+      "description": "Tertarik dengan keahlian saya? Apakah Anda memiliki proyek GIS, Excel VBA, atau pengembangan aplikasi? Jangan ragu untuk menghubungi saya!",
+      "cta": "Hubungi Saya",
+      "form": {
+        "name": "Nama Lengkap",
+        "email": "Email",
+        "subject": "Subjek",
+        "message": "Pesan",
+        "submit": "Kirim Pesan"
+      }
+    },
+    "footer": {
+      "tagline": "Solusi inovatif untuk perencanaan wilayah dan analisis data",
+      "navigation": "Navigasi",
+      "services": "Layanan",
+      "contact": "Kontak",
+      "location": "Surakarta, Indonesia",
+      "rights": "Hak Cipta Dilindungi."
+    },
+    "services": {
+      "gis": "GIS & Pemetaan",
+      "excel": "Otomatisasi Excel",
+      "development": "Pengembangan Aplikasi",
+      "consultation": "Konsultasi"
+    },
+    "about": {
+      "title": "Tentang Saya",
+      "subtitle": "GIS Specialist & Solutions Developer",
+      "description": "Saya adalah seorang spesialis GIS dan pengembang solusi dengan pengalaman lebih dari 3 tahun di PT. Rekadwipa Teknika Studio. Dengan latar belakang pendidikan di bidang Perencanaan Wilayah dan Kota dari Universitas Sebelas Maret, saya menggabungkan pengetahuan akademis dengan keahlian teknis untuk memberikan solusi terbaik.",
+      "skills": "Keahlian Teknis",
+      "timeline": "Lini Masa"
+    }
+  }
