@@ -2101,6 +2101,17 @@ button, .btn {
     fill: var(--primary-color);
 }
 
+.social-link img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+    transition: all var(--transition-normal);
+}
+
+.social-link:hover img {
+    filter: brightness(0) saturate(100%) invert(53%) sepia(98%) saturate(1000%) hue-rotate(195deg) brightness(110%) contrast(85%);
+}
+
 /* --------- FOOTER --------- */
 .footer {
     background-color: var(--bg-dark);
